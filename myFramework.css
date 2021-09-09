@@ -1,0 +1,311 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-size: 1rem;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  margin: 1rem;
+  padding: 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: inherit;
+  font-size: inherit;
+  text-decoration: none;
+  list-style: none;
+  font-family: arial , sans-serif;
+  font-weight: lighter;
+  border: none;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.relDiv {
+  position: relative;
+}
+
+.relDiv > * {
+  position: absolute;
+}
+
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.clip1 {
+  -webkit-clip-path: polygon(0 25%, 100% 0, 100% 82%, 0% 100%);
+          clip-path: polygon(0 25%, 100% 0, 100% 82%, 0% 100%);
+  padding: 0.5rem;
+  display: inline-block;
+  background-color: var(--color10);
+}
+
+.trans11:hover, .trans11:active {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.trans11:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.btn1, .btn2 {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+}
+
+input, textarea {
+  border-bottom: 2px var(--color10) solid;
+  font-size: 1rem;
+}
+
+.fadeRight {
+  -webkit-animation: 1s ease-in-out fadeRight forwards;
+          animation: 1s ease-in-out fadeRight forwards;
+}
+
+.fadeLeft {
+  -webkit-animation: 1s ease-in-out fadeLeft forwards;
+          animation: 1s ease-in-out fadeLeft forwards;
+}
+
+.fadeRightLine {
+  -webkit-animation: 1s ease-in-out fadeRightLine forwards;
+          animation: 1s ease-in-out fadeRightLine forwards;
+}
+
+.fadeLeftLine {
+  -webkit-animation: 1s ease-in-out fadeLeftLine forwards;
+          animation: 1s ease-in-out fadeLeftLine forwards;
+  -webkit-transform-origin: middle center;
+          transform-origin: middle center;
+}
+
+@-webkit-keyframes fadeRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-5rem);
+            transform: translateX(-5rem);
+  }
+  40% {
+    -webkit-transform: translateX(2rem);
+            transform: translateX(2rem);
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-5rem);
+            transform: translateX(-5rem);
+  }
+  40% {
+    -webkit-transform: translateX(2rem);
+            transform: translateX(2rem);
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes fadeLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(5rem);
+            transform: translateX(5rem);
+  }
+  40% {
+    -webkit-transform: translateX(-2rem);
+            transform: translateX(-2rem);
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(5rem);
+            transform: translateX(5rem);
+  }
+  40% {
+    -webkit-transform: translateX(-2rem);
+            transform: translateX(-2rem);
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes fadeRightLine {
+  from {
+    opacity: 0;
+    -webkit-transform: scaleY(0.1) translateX(-5rem);
+            transform: scaleY(0.1) translateX(-5rem);
+  }
+  40% {
+    -webkit-transform: scaleY(0.1) translateX(2rem);
+            transform: scaleY(0.1) translateX(2rem);
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scaleY(1) translateX(0);
+            transform: scaleY(1) translateX(0);
+  }
+}
+
+@keyframes fadeRightLine {
+  from {
+    opacity: 0;
+    -webkit-transform: scaleY(0.1) translateX(-5rem);
+            transform: scaleY(0.1) translateX(-5rem);
+  }
+  40% {
+    -webkit-transform: scaleY(0.1) translateX(2rem);
+            transform: scaleY(0.1) translateX(2rem);
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scaleY(1) translateX(0);
+            transform: scaleY(1) translateX(0);
+  }
+}
+
+@-webkit-keyframes fadeLeftLine {
+  from {
+    opacity: 0;
+    -webkit-transform: scaleY(0.1) translateX(5rem);
+            transform: scaleY(0.1) translateX(5rem);
+  }
+  40% {
+    -webkit-transform: scaleY(0.1) translateX(-2rem);
+            transform: scaleY(0.1) translateX(-2rem);
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scaleY(1) translateX(0);
+            transform: scaleY(1) translateX(0);
+  }
+}
+
+@keyframes fadeLeftLine {
+  from {
+    opacity: 0;
+    -webkit-transform: scaleY(0.1) translateX(5rem);
+            transform: scaleY(0.1) translateX(5rem);
+  }
+  40% {
+    -webkit-transform: scaleY(0.1) translateX(-2rem);
+            transform: scaleY(0.1) translateX(-2rem);
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scaleY(1) translateX(0);
+            transform: scaleY(1) translateX(0);
+  }
+}
+/*# sourceMappingURL=myFramework.css.map */
