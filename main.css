@@ -256,6 +256,7 @@ nav span div {
 
 .heading img:nth-of-type(3) {
   bottom: 0.1rem;
+  left: 0;
 }
 
 .sec-2 {
@@ -440,5 +441,6 @@ div.foot > div {
 div.foot > div i {
   font-size: 2rem;
   color: var(--color10);
+  margin-bottom: 1rem;
 }
 /*# sourceMappingURL=main.css.map */
