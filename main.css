@@ -178,16 +178,17 @@ nav span div {
 
 .heading {
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 1rem;
+  position: relative;
   padding-top: 8rem;
   width: 100%;
+}
+
+.heading > div:nth-of-type(1) * {
+  margin: 1rem;
+}
+
+.heading > div {
+  position: absolute;
 }
 
 .heading h3 {
@@ -217,9 +218,7 @@ nav span div {
 }
 
 .heading .profile {
-  position: relative;
-  margin-bottom: 0;
-  margin-top: auto;
+  bottom: 0;
 }
 
 .heading .profile a {
@@ -239,19 +238,20 @@ nav span div {
   letter-spacing: 5px;
 }
 
-.heading img:nth-of-type(1) {
-  position: static;
-}
-
 .heading img {
   width: 100vw;
-  margin-left: -1rem;
   margin-bottom: -1rem;
   position: absolute;
 }
 
+.heading img:nth-of-type(1) {
+  position: static;
+  margin-left: 0;
+}
+
 .heading img:nth-of-type(2) {
   bottom: 0;
+  left: 0;
 }
 
 .heading img:nth-of-type(3) {
@@ -282,11 +282,11 @@ nav span div {
 .sec-2 .company p {
   color: white;
   padding: 0.5rem 0rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .sec-2 .company > p:nth-of-type(1) {
-  background-color: rgba(255, 242, 254, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
   padding: 1rem;
   color: var(--color00);
 }
@@ -302,7 +302,7 @@ nav span div {
           transform: translateX(-50%);
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 .sec-2 div:nth-of-type(2) img {
