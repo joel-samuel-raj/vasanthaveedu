@@ -44,7 +44,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 .modal1 {
     display : block;
-    animation : 1s fadeRight forwards;
+    animation : 1s fadeDown forwards;
 }
 nav {
     width: 100%;
@@ -205,6 +205,17 @@ nav span div {
         bottom : 0.1rem;
         left : 0;
 
+    }
+}
+.what {
+    display : flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding : 1rem;
+    h2, p {
+        text-align: center;
+        line-height: 1.5rem;
     }
 }
 .sec-2 {

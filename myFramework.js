@@ -10,40 +10,33 @@ function loadJSON () {
     .then(data => {
         let html = '';
         data.forEach(item => {
-            console.log(item);
             html += ` 
-                <img src = "${item.imgSrc}" class = "itemAnime">
+                <img src = "${item.imgSrc}" >
             `
         });
-        console.log(html);
         document.getElementById("ongoing").innerHTML = html;
     })
 }
 
 //      INTERSECTION OBSERVER
-    const itemAnime = document.querySelectorAll(".itemAnime");
-let observer = new IntersectionObserver(callBack);
-for (var i = 0; i < itemAnime.length; i++) {
-    observer.observe(itemAnime[i]);
-    console.log(itemAnime[i]);
-}
-function callBack (Entries) {
-    Entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-            if (index / 2 == 0) {
-                if (entry.target.tagName == "P" || entry.target.tagName == "A" || entry.target.tagName == "SPAN") {
-                    entry.target.classList.add("fadeRight");
-                }
-                else {
-                    entry.target.classList.add("fadeLeft");
-                }
+function animation(className, animationName) {
+    const item = document.getElementsByClassName(className);
+    let observer = new IntersectionObserver(callBack);
+    for (var i = 0; i < item.length; i++) {
+        observer.observe(item[i]);
+    }
+    function callBack (Entries) {
+        Entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add(animationName);
             }
-            else {
-                entry.target.classList.add("fadeLeftLine");
-            }
-        }
-    })
+        })
+    }
 }
+            animation ('animeTop', 'fadeTop');
+            animation ('animeLeft', 'fadeLeft');
+            animation ('animeRight', 'fadeRight');
+            animation ('animeDown', 'fadeDown');
 
 //      TOGGLE CLASS 
 function toggleClass (element, className) {

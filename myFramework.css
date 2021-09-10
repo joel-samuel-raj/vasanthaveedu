@@ -143,6 +143,10 @@ input, textarea {
   font-size: 1rem;
 }
 
+.itemAnime {
+  opacity: 0;
+}
+
 .fadeRight {
   -webkit-animation: 1s ease-in-out fadeRight forwards;
           animation: 1s ease-in-out fadeRight forwards;
@@ -163,6 +167,16 @@ input, textarea {
           animation: 1s ease-in-out fadeLeftLine forwards;
   -webkit-transform-origin: middle center;
           transform-origin: middle center;
+}
+
+.fadeTop {
+  -webkit-animation: 1s ease-in-out fadeTop forwards;
+          animation: 1s ease-in-out fadeTop forwards;
+}
+
+.fadeDown {
+  -webkit-animation: 1s ease-in-out fadeDown forwards;
+          animation: 1s ease-in-out fadeDown forwards;
 }
 
 @-webkit-keyframes fadeRight {
@@ -306,6 +320,78 @@ input, textarea {
     opacity: 1;
     -webkit-transform: scaleY(1) translateX(0);
             transform: scaleY(1) translateX(0);
+  }
+}
+
+@-webkit-keyframes fadeTop {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(5rem);
+            transform: translateY(5rem);
+  }
+  40% {
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadeTop {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(5rem);
+            transform: translateY(5rem);
+  }
+  40% {
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fadeDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-5rem);
+            transform: translateY(-5rem);
+  }
+  40% {
+    -webkit-transform: translateY(1rem);
+            transform: translateY(1rem);
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-5rem);
+            transform: translateY(-5rem);
+  }
+  40% {
+    -webkit-transform: translateY(1rem);
+            transform: translateY(1rem);
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 /*# sourceMappingURL=myFramework.css.map */
