@@ -284,15 +284,25 @@ nav span div {
     flex-direction : column;
     justify-content : space-around;
     padding : 1rem;
+    > div {
+        flex : auto;
+        display : flex;
+        flex-direction : column;
+        justify-content : space-around;
+        align-items: center;
+        img {
+            margin : 1rem 0;
+            box-shadow : var(--color00) 5px 15px;
+            height : 23vh;
+            width : 100%;
+        }
+    }
     h2 {
         color : black;
     }
-    img {
-        box-shadow : var(--color00) 5px 15px;
-        height : 23vh;
-    }
     span {
         margin-left : auto;
+        margin-top: 1rem;
     }
 }
 section:last-of-type {

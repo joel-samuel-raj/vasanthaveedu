@@ -33,4 +33,26 @@ window.addEventListener("scroll", () => {
 
 document.getElementsByClassName("hamburger")[0].addEventListener("click", () => {
     document.getElementsByClassName("modal")[0].classList.toggle("modal1");
-})
+});
+
+// JSON
+window.addEventListener(
+    "DOMContentLoaded", () => {
+        loadJSON("ongoing.json");
+    }
+) 
+function loadJSON (fileName) {
+    fetch(fileName)
+    .then(response => response.json())
+    .then(data => {
+        let html = '';
+        data.forEach(item => {
+            console.log(item);
+            html += ` 
+                <img src = "${item.imgSrc}" class = "itemAnime" alt="">
+            `
+        });
+        console.log(html);
+        document.getElementById("ongoing").innerHTML = html;
+    })
+}
