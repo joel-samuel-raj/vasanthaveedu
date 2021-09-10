@@ -357,6 +357,10 @@ nav span div {
   margin: 0 !important;
 }
 
+.red {
+  opacity: 0.1 !important;
+}
+
 .projects {
   display: -webkit-box;
   display: -ms-flexbox;

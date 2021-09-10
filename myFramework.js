@@ -1,8 +1,31 @@
+// JSON
+window.addEventListener(
+    "DOMContentLoaded", () => {
+        loadJSON("");
+    }
+) 
+function loadJSON () {
+    fetch("ongoing.json")
+    .then(response => response.json())
+    .then(data => {
+        let html = '';
+        data.forEach(item => {
+            console.log(item);
+            html += ` 
+                <img src = "${item.imgSrc}" class = "itemAnime">
+            `
+        });
+        console.log(html);
+        document.getElementById("ongoing").innerHTML = html;
+    })
+}
+
 //      INTERSECTION OBSERVER
-let itemAnime = document.querySelectorAll(".itemAnime");
+    const itemAnime = document.querySelectorAll(".itemAnime");
 let observer = new IntersectionObserver(callBack);
 for (var i = 0; i < itemAnime.length; i++) {
     observer.observe(itemAnime[i]);
+    console.log(itemAnime[i]);
 }
 function callBack (Entries) {
     Entries.forEach((entry, index) => {
@@ -12,7 +35,7 @@ function callBack (Entries) {
                     entry.target.classList.add("fadeRight");
                 }
                 else {
-                    entry.target.classList.add("fadeRightLine");
+                    entry.target.classList.add("fadeLeft");
                 }
             }
             else {
@@ -35,24 +58,3 @@ document.getElementsByClassName("hamburger")[0].addEventListener("click", () => 
     document.getElementsByClassName("modal")[0].classList.toggle("modal1");
 });
 
-// JSON
-window.addEventListener(
-    "DOMContentLoaded", () => {
-        loadJSON("ongoing.json");
-    }
-) 
-function loadJSON (fileName) {
-    fetch(fileName)
-    .then(response => response.json())
-    .then(data => {
-        let html = '';
-        data.forEach(item => {
-            console.log(item);
-            html += ` 
-                <img src = "${item.imgSrc}" class = "itemAnime" alt="">
-            `
-        });
-        console.log(html);
-        document.getElementById("ongoing").innerHTML = html;
-    })
-}
