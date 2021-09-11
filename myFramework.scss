@@ -25,7 +25,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-    font-size: 1rem;
+    font-size: 0 !important;
 }
 ol, ul {
 	list-style: none;
@@ -54,6 +54,7 @@ table {
     font-family: arial , sans-serif;
     font-weight: lighter;
     border : none;
+    font-size : 1rem ;
 }
 
 h1 {
@@ -141,6 +142,7 @@ section {
 .btn1, .btn2 {
     display : inline-block;
     padding : 0.5rem 1rem;
+    font-size: 1rem;
 }
 input:focus, textarea:focus, select:focus{
     outline: none;
@@ -174,7 +176,12 @@ input, textarea {
 .animeDel5{
     animation-delay : 0.5s;
 }
-
+.animeDel2 {
+    animation-delay : 0.2s;
+}
+.animeDel3 {
+    animation-delay : 0.3s;
+}
 @keyframes fadeRight {
     from {
         opacity : 0;

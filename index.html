@@ -36,11 +36,11 @@
             </span>
         </div>
         <div class="nav-bottom center">
-            <a href="" class = "btn1">
-                About
+            <a href="planning.html" class = "btn1">
+                Planning
             </a>
-            <a href="" class = "btn1">
-                Contact
+            <a href="approval.html" class = "btn1">
+                Approval
             </a>
             <a href="portfolio.html" class = "btn1">
                 Portfolio
@@ -49,6 +49,14 @@
     </nav>
     <section class = top>
         <div class="heading">
+            <div class="profile center">
+               
+                <a>
+                    <h3 class = "clip1">
+                        THIRUVERKADU <i class="fas fa-map-marker-alt"></i>
+                    </h3>
+                </a>
+            </div>
             <div>
                 <h3 >
                     Lorem ipsum dolor sit amet.
@@ -59,17 +67,13 @@
                 <p class = animeRight>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores excepturi reiciendis et iure quaerat. Quod esse
                 </p>
-            </div>
-            <div class="profile">
-                <img src="./images/profile.png" alt="Arun Mathivanan">
+                <a href="" class = btn2>
+                    contact
+                </a>
                 <img src="./images/wave.svg">
                 <img src="./images/wave1.svg" alt="">
-                <a>
-                    <h3 class = "clip1">
-                        THIRUVERKADU <i class="fas fa-map-marker-alt"></i>
-                    </h3>
-                </a>
             </div>
+            
         </div>
     </section>
     <section class = what>
@@ -165,8 +169,7 @@
             <input type="text" placeholder = "🙎🏼 Name" name = data[Name]>
             <input type="text" placeholder = "📞 Phone no" name = data[Phone]>
             <input type="text" placeholder = "✉️ E-mail" name = data[Email]>
-            <textarea placeholder = "🗨️ Send us a message" name = data[Message]>
-            </textarea>
+            <textarea placeholder = "🗨️ Send us a message" name = data[Message]></textarea>
             <button class = btn2>
                 Submit
             </button>
@@ -221,17 +224,21 @@
 
         window.addEventListener(
     "DOMContentLoaded", () => {
-        loadJSON("");
+        loadJSON();
     }
 ) 
 function loadJSON () {
+    animation ('animeTop', 'fadeTop');
+    animation ('animeLeft', 'fadeLeft');
+    animation ('animeRight', 'fadeRight');
+    animation ('animeDown', 'fadeDown');
     fetch("ongoing.json")
     .then(response => response.json())
     .then(data => {
         let html = '';
-        data.forEach(item => {
+        data.reverse().forEach(item => {
             html += ` 
-                <img src = "${item.imgSrc}" >
+                <img src = "${item.imgSrc}" class = fadeRight >
             `
         });
         document.getElementById("ongoing").innerHTML = html;
