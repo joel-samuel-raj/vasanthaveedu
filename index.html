@@ -204,5 +204,39 @@
         </div>
     </section>
     <script src = "myFramework.js"></script>
+    <script>
+        var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(document.getElementById("sheetdb-form")),
+          }).then(
+              response => response.json()
+          ).then((html) => {
+            // you can put any JS code here
+            alert('We have recieved your message and will contact you soon ❗ ⏳')
+          });
+        });
+
+        window.addEventListener(
+    "DOMContentLoaded", () => {
+        loadJSON("");
+    }
+) 
+function loadJSON () {
+    fetch("ongoing.json")
+    .then(response => response.json())
+    .then(data => {
+        let html = '';
+        data.forEach(item => {
+            html += ` 
+                <img src = "${item.imgSrc}" >
+            `
+        });
+        document.getElementById("ongoing").innerHTML = html;
+    })
+}
+    </script>
 </body>
 </html>

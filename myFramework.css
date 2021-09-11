@@ -88,6 +88,58 @@ section {
   width: 100%;
 }
 
+.style1 {
+  padding: 1rem;
+}
+
+.style1 img {
+  width: 100%;
+  -webkit-box-shadow: var(--color00) 0px 5px 5px;
+          box-shadow: var(--color00) 0px 5px 5px;
+}
+
+.style1 h3 {
+  margin: 1rem 0;
+  color: var(--color10);
+}
+
+.style1 i {
+  font-size: 1.5rem;
+  color: var(--color10);
+  float: left;
+  margin: 0 1rem 1rem;
+  cursor: pointer;
+}
+
+.style1 .misc-p {
+  display: none;
+}
+
+.style1 .misc-p-appear {
+  display: block;
+  -webkit-animation: 1s fadeDown forwards;
+          animation: 1s fadeDown forwards;
+}
+
+.style1 p {
+  margin: 1rem 3rem;
+}
+
+.style1 .btn2 {
+  float: right;
+  margin-bottom: 1rem;
+}
+
+.style1 i {
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.style1 .up {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .relDiv {
   position: relative;
 }
@@ -177,6 +229,11 @@ input, textarea {
 .fadeDown {
   -webkit-animation: 1s ease-in-out fadeDown forwards;
           animation: 1s ease-in-out fadeDown forwards;
+}
+
+.animeDel5 {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 
 @-webkit-keyframes fadeRight {
@@ -386,6 +443,38 @@ input, textarea {
   40% {
     -webkit-transform: translateY(1rem);
             transform: translateY(1rem);
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes modalDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-10vh);
+            transform: translateY(-10vh);
+  }
+  40% {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes modalDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-10vh);
+            transform: translateY(-10vh);
+  }
+  40% {
     opacity: 0.7;
   }
   to {

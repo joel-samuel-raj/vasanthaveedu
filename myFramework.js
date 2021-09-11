@@ -1,22 +1,22 @@
 // JSON
-window.addEventListener(
-    "DOMContentLoaded", () => {
-        loadJSON("");
-    }
-) 
-function loadJSON () {
-    fetch("ongoing.json")
-    .then(response => response.json())
-    .then(data => {
-        let html = '';
-        data.forEach(item => {
-            html += ` 
-                <img src = "${item.imgSrc}" >
-            `
-        });
-        document.getElementById("ongoing").innerHTML = html;
-    })
-}
+// window.addEventListener(
+//     "DOMContentLoaded", () => {
+//         loadJSON("");
+//     }
+// ) 
+// function loadJSON () {
+//     fetch("ongoing.json")
+//     .then(response => response.json())
+//     .then(data => {
+//         let html = '';
+//         data.forEach(item => {
+//             html += ` 
+//                 <img src = "${item.imgSrc}" >
+//             `
+//         });
+//         document.getElementById("ongoing").innerHTML = html;
+//     })
+// }
 
 //      INTERSECTION OBSERVER
 function animation(className, animationName) {
@@ -52,16 +52,25 @@ document.getElementsByClassName("hamburger")[0].addEventListener("click", () => 
 });
 
 // FORM
-var form = document.getElementById('sheetdb-form');
-        form.addEventListener("submit", e => {
-          e.preventDefault();
-          fetch(form.action, {
-              method : "POST",
-              body: new FormData(document.getElementById("sheetdb-form")),
-          }).then(
-              response => response.json()
-          ).then((html) => {
-            // you can put any JS code here
-            alert('We have recieved your message and will contact you soon ❗ ⏳')
-          });
-        });
+// var form = document.getElementById('sheetdb-form');
+//         form.addEventListener("submit", e => {
+//           e.preventDefault();
+//           fetch(form.action, {
+//               method : "POST",
+//               body: new FormData(document.getElementById("sheetdb-form")),
+//           }).then(
+//               response => response.json()
+//           ).then((html) => {
+//             // you can put any JS code here
+//             alert('We have recieved your message and will contact you soon ❗ ⏳')
+//           });
+//         });
+
+// PORT
+var down = document.getElementsByClassName("down");
+for (var i = 0; i < down.length; i++) {
+    down[i].addEventListener("click", (event) => {
+        event.target.nextElementSibling.classList.toggle("misc-p-appear");
+        event.target.classList.toggle("up");
+    })
+}

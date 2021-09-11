@@ -1,0 +1,32 @@
+[
+    {
+        "imgSrc" : "https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-3cu17au7ji9odmjns29rc1air4-20170703020001.Medi.jpeg",
+        "heading" : "lorem Ipsum dolar sit",
+        "para1" : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, consequatur",   
+        "para2" : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, consequatur"
+    },
+    {
+        "imgSrc" : "https://fabianostner.files.wordpress.com/2012/09/dscf0511.jpg",
+        "heading" : "lorem Ipsum dolar sit",
+        "para1" : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, consequatur",   
+        "para2" : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, consequatur"
+    },
+    {
+        "imgSrc" : "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/QUJB2YD4KRKB5OPGTIRL6A7M3A.jpg",
+        "heading" : "lorem Ipsum dolar sit",
+        "para1" : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, consequatur",   
+        "para2" : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, consequatur"
+    },
+    {
+        "imgSrc" : "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ifN7fJ8hL14Q/v1/-1x-1.jpg",
+        "heading" : "lorem Ipsum dolar sit",
+        "para1" : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, consequatur",   
+        "para2" : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, consequatur"
+    },
+    {
+        "imgSrc" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXFPQCIY5cidH1alJwhrEmI5BDGyTTpEQcsg&usqp=CAU",
+        "heading" : "lorem Ipsum dolar sit",
+        "para1" : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, consequatur",   
+        "para2" : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, consequatur"
+    }
+]

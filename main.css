@@ -39,13 +39,16 @@ h1, h2, h3, h4, h5, h6 {
   height: 100vh;
   background-color: var(--color10);
   z-index: 10;
-  display: none;
+  opacity: 0;
+  -webkit-transform-origin: right top;
+          transform-origin: right top;
+  top: -100vh;
 }
 
 .modal1 {
-  display: block;
-  -webkit-animation: 1s fadeDown forwards;
-          animation: 1s fadeDown forwards;
+  -webkit-animation: 1s modalDown ease-in-out forwards;
+          animation: 1s modalDown ease-in-out forwards;
+  top: 0;
 }
 
 nav {
@@ -488,5 +491,9 @@ div.foot > div i {
   font-size: 2rem;
   color: var(--color10);
   margin: 1rem;
+}
+
+.port-1 > div {
+  margin-top: 7rem;
 }
 /*# sourceMappingURL=main.css.map */

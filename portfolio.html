@@ -48,34 +48,35 @@
         </div>
     </nav>
 
-    <section>
-        
+    <section class = port-1>
+        <div class = style1 id = style1>
+            <!-- <img src="./images/mainbg1.jpg" alt="">
+            <h3>
+                Lorem ipsum dolor sit amet.
+            </h3>
+            <i class="fas fa-sort-down down"></i>
+            <p class = "misc-p">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, consequatur.
+            </p>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, consequuntur!
+            </p>
+            <a href="" class = btn2>
+                Interested ?
+            </a> -->
+        </div>
     </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <section>
-        <form action="">
-            <input type="text" placeholder = "🙎🏼 Name">
-            <input type="text" placeholder = "📞 Phone no">
-            <input type="text" placeholder = "✉️ E-mail">
-            <textarea placeholder = "🗨️ Send us a message">
-            </textarea>
+            <form action="https://sheetdb.io/api/v1/vqiy954nrbp7v" method = "POST" id = sheetdb-form>
+                <input type="text" placeholder = "🙎🏼 Name" name = data[Name]>
+                <input type="text" placeholder = "📞 Phone no" name = data[Phone]>
+                <input type="text" placeholder = "✉️ E-mail" name = data[Email]>
+                <textarea placeholder = "🗨️ Send us a message" name = data[Message]>
+                </textarea>
+                <button class = btn2>
+                    Submit
+                </button>
         </form>
         <div class="foot">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15546.02656144267!2d80.11759497782006!3d13.06704515269186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52618ec4725821%3A0xcfa574cffd58a0c1!2sVasantha%20Veddu%20Planners%20and%20Builders%20(Building%20Approval%20%26%20Plan)!5e0!3m2!1sen!2sin!4v1631209883551!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -110,5 +111,64 @@
         </div>
     </section>
     <script src = "myFramework.js"></script>
+    <script>
+var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(document.getElementById("sheetdb-form")),
+          }).then(
+              response => response.json()
+          ).then((html) => {
+            // you can put any JS code here
+            alert('We have recieved your message and will contact you soon ❗ ⏳')
+          });
+        });
+
+
+    window.addEventListener(
+    "DOMContentLoaded", () => {
+        loadJSON("");
+    }
+) 
+        function loadJSON () {
+        fetch("portfolio.json")
+        .then(response => response.json())
+        .then(data => {
+            let html = '';
+            data.forEach(item => {
+                html += ` 
+                <img src="${item.imgSrc}" class = "animeRight" alt="">
+                <h3>
+                    ${item.heading}
+                </h3>
+                <i class="fas fa-sort-down down"></i>
+                <p class = "misc-p">
+                    ${item.para1}
+                </p>
+                <p class = "animeTop animeDel5">
+                    ${item.para2}
+                </p>
+                <a href="" class = btn2>
+                    Interested ?
+                </a>
+                `
+            });
+            document.getElementById("style1").innerHTML = html;
+            animation ('animeTop', 'fadeTop');
+            animation ('animeLeft', 'fadeLeft');
+            animation ('animeRight', 'fadeRight');
+            animation ('animeDown', 'fadeDown');
+            var down = document.getElementsByClassName("down");
+            for (var i = 0; i < down.length; i++) {
+                down[i].addEventListener("click", (event) => {
+                    event.target.nextElementSibling.classList.toggle("misc-p-appear");
+                    event.target.classList.toggle("up");
+                })
+            }
+    })
+}
+    </script>
 </body>
 </html>
