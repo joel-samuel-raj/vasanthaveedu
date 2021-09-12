@@ -151,9 +151,9 @@ input, textarea {
     border-bottom: 2px var(--color10) solid;
     font-size : 1rem;
 }
-// .animeTop, .animeDown, .animeRight, .animeLeft{
-//     opacity : 0;
-// }
+.animeTop, .animeDown, .animeRight, .animeLeft{
+    opacity : 0;
+}
 .fadeRight {
     animation : 1s ease-in-out fadeRight forwards;
 }
