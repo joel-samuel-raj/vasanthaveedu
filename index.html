@@ -228,10 +228,6 @@
     }
 ) 
 function loadJSON () {
-    animation ('animeTop', 'fadeTop');
-    animation ('animeLeft', 'fadeLeft');
-    animation ('animeRight', 'fadeRight');
-    animation ('animeDown', 'fadeDown');
     fetch("ongoing.json")
     .then(response => response.json())
     .then(data => {
@@ -242,6 +238,10 @@ function loadJSON () {
             `
         });
         document.getElementById("ongoing").innerHTML = html;
+        animation ('animeTop', 'fadeTop');
+        animation ('animeLeft', 'fadeLeft');
+        animation ('animeRight', 'fadeRight');
+        animation ('animeDown', 'fadeDown');
     })
 }
     </script>
