@@ -3,14 +3,14 @@
 //     "DOMContentLoaded", () => {
 //         loadJSON("");
 //     }
-// ) 
+// )
 // function loadJSON () {
 //     fetch("ongoing.json")
 //     .then(response => response.json())
 //     .then(data => {
 //         let html = '';
 //         data.forEach(item => {
-//             html += ` 
+//             html += `
 //                 <img src = "${item.imgSrc}" >
 //             `
 //         });
@@ -20,36 +20,38 @@
 
 //      INTERSECTION OBSERVER
 function animation(className, animationName) {
-    const item = document.getElementsByClassName(className);
-    let observer = new IntersectionObserver(callBack);
-    for (var i = 0; i < item.length; i++) {
-        observer.observe(item[i]);
-    }
-    function callBack (Entries) {
-        Entries.forEach((entry, index) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add(animationName);
-            }
-        })
-    }
+  const item = document.getElementsByClassName(className);
+  let observer = new IntersectionObserver(callBack);
+  for (var i = 0; i < item.length; i++) {
+    observer.observe(item[i]);
+  }
+  function callBack(Entries) {
+    Entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add(animationName);
+      }
+    });
+  }
 }
-            animation ('animeTop', 'fadeTop');
-            animation ('animeLeft', 'fadeLeft');
-            animation ('animeRight', 'fadeRight');
-            animation ('animeDown', 'fadeDown');
+animation("animeTop", "fadeTop");
+animation("animeLeft", "fadeLeft");
+animation("animeRight", "fadeRight");
+animation("animeDown", "fadeDown");
 
-//      TOGGLE CLASS 
-function toggleClass (element, className) {
-    element.classList.toggle(className);
+//      TOGGLE CLASS
+function toggleClass(element, className) {
+  element.classList.toggle(className);
 }
 
 window.addEventListener("scroll", () => {
-    document.querySelector("nav").classList.toggle("navbar1", window.scrollY > 0);
-})
-
-document.getElementsByClassName("hamburger")[0].addEventListener("click", () => {
-    document.getElementsByClassName("modal")[0].classList.toggle("modal1");
+  document.querySelector("nav").classList.toggle("navbar1", window.scrollY > 0);
 });
+
+document
+  .getElementsByClassName("hamburger")[0]
+  .addEventListener("click", () => {
+    document.getElementsByClassName("modal")[0].classList.toggle("modal1");
+  });
 
 // FORM
 // var form = document.getElementById('sheetdb-form');
@@ -69,8 +71,8 @@ document.getElementsByClassName("hamburger")[0].addEventListener("click", () => 
 // PORT
 var down = document.getElementsByClassName("down");
 for (var i = 0; i < down.length; i++) {
-    down[i].addEventListener("click", (event) => {
-        event.target.nextElementSibling.classList.toggle("misc-p-appear");
-        event.target.classList.toggle("up");
-    })
+  down[i].addEventListener("click", (event) => {
+    event.target.nextElementSibling.classList.toggle("misc-p-appear");
+    event.target.classList.toggle("up");
+  });
 }

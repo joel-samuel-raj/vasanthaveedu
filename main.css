@@ -192,6 +192,7 @@ nav span div {
   left: 50%;
   -webkit-transform: translateX(calc(-50% - 1rem)) translateY(1rem);
           transform: translateX(calc(-50% - 1rem)) translateY(1rem);
+  z-index: 1;
 }
 
 .heading > div:nth-of-type(2) * {
@@ -633,5 +634,30 @@ div.foot > div i {
 .approval-1 div:nth-of-type(2) p, .approval-1 div:nth-of-type(3) p {
   line-height: 2rem;
   text-align: center;
+}
+
+@media only screen and (min-width: 600px) {
+  * {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .profile {
+    height: 65vh !important;
+    padding-top: 40vh !important;
+  }
+  .top div:nth-of-type(2) {
+    width: 500px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin: auto;
+  }
 }
 /*# sourceMappingURL=main.css.map */
